@@ -1,0 +1,56 @@
+
+<style>
+    .footerinfo {
+    margin-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    height: 8rem;
+    background-color: #ebebeb;
+    justify-content: center; /* Centering the child elements */
+    align-items: center; /* Centering vertically */
+    width: 100%;
+    text-align: center;
+}
+
+.finfolinks, .finfosocial, .companyname {
+    width: 100%; /* Ensure each section takes full width */
+    text-align: center; /* Center the text */
+}
+
+.finfolinks a {
+    text-decoration: none;
+    color: #222222;
+    margin-left: 1rem;
+}
+
+.finfolinks a:hover {
+    text-decoration: underline;
+}
+
+/* Additional spacing for .finfosocial icons and .companyname */
+.finfosocial i {
+    margin: 0 1rem;
+}
+
+.companyname {
+    margin: 1rem 0;
+}
+
+</style>
+
+<footer>
+    <div class="footerinfo">
+        <div class="finfosocial">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </div>
+        <div class="companyname">
+            &copy; Wanderlust Private Limited
+        </div>
+        <div class="finfolinks">
+            <a href="/privacy">Privacy</a>
+            <a href="/terms">Terms</a>
+        </div>
+    </div>
+</footer>

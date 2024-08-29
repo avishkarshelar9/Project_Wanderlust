@@ -1,0 +1,116 @@
+
+    
+<% layout("/layouts/boilerplate.ejs") %>
+
+<div class="row">
+    <div class="col-8 offset-2">
+        <br><br>
+    <h3>Create new Listing</h3>
+    <form  method="POST"  action="/listings" novalidate  enctype="multipart/form-data"
+    class="needs-validation" >
+        <div class="mb-3">
+            <label for="title" class="from-label">Title</label>
+            <input name="listing[title]" placeholder="Enter Catchy Title" type="text"
+             class="form-control" required>
+
+             <div class="valid-feedback">
+                Title looks Good!
+             </div>
+             <div class="invalid-feedback">
+                Please enter valid title!
+             </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="description" class="from-label">Discrption</label>
+            <textarea name="listing[description]" placeholder="Description" 
+            type="text" class="form-control" required>
+            </textarea>
+            <div class="valid-feedback">
+                Discrption looks Good!
+             </div>
+             <div class="invalid-feedback">
+                Please enter valid Description!
+             </div>
+        </div>
+
+        
+     
+        
+        <div class="mb-3">
+            <label for="image" class="from-label">Uplode Image</label>
+            <input name="listing[image]" type="file" class="form-control" required>
+            
+        </div>
+        
+        <div class="row">
+            <div class="mb-3 col-md-4">
+                <label for="price" class="from-label">Price</label>
+                <input  name ="listing[price]" 
+                placeholder="1200" type="text" class="form-control"  required>
+                <div class="valid-feedback">
+                    Price looks Good!
+                 </div>
+                 <div class="invalid-feedback">
+                    Please enter valid Price!
+                 </div>
+            </div>
+
+            <div class="mb-3 col-md-8">
+                <label for="country" class="from-label">country</label>
+                <input name ="listing[country]" placeholder="India" type="text"
+                 class="form-control"  required>
+
+                 <div class="valid-feedback">
+                    Country looks Good!
+                 </div>
+                 <div class="invalid-feedback">
+                    Please enter valid Country!
+                 </div>
+            </div>
+
+        </div>
+
+        
+        <div class="mb-3">
+            <label for="location" class="from-label">Location</label>
+            <input name = "listing[location]" 
+            placeholder="Mumbai" type="text" class="form-control"  required>
+            <div class="valid-feedback">
+                Location looks Good!
+             </div>
+             <div class="invalid-feedback">
+                Please enter valid Location!
+             </div>
+        </div>
+        
+        
+        
+        
+        <button class="btn add-btn">Create</button>
+        <br><br>
+    </form>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+    'use strict'
+  
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.querySelectorAll('.needs-validation')
+  
+    // Loop over them and prevent submission
+    Array.prototype.slice.call(forms)
+      .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+  
+          form.classList.add('was-validated')
+        }, false)
+      })
+  })()
+    </script>
+</div>
+</div>

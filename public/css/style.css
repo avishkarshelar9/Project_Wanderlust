@@ -1,0 +1,112 @@
+
+
+body{
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 100vh !important;
+}
+
+.container{
+    flex: 1 !important;
+}
+
+.plus-jakarta-sans {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  font-optical-sizing: auto !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+}
+
+
+.navbar {
+    height: 5rem;
+    background-color: white;
+}
+.fa-compass{
+    color: #fe424d;
+    font-size: 2rem;
+}
+
+.nav-link{
+    color: #222222 !important;
+}
+
+
+
+
+/*cards*/
+
+
+
+.card{
+    border: none !important;
+    margin-bottom: 2rem;
+}
+
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none !important;
+    color: black !important;
+}
+
+.card-body{
+    padding: 0 !important;
+}
+
+
+/*cards effect*/
+
+.card-img-overlay{
+    opacity: 0;
+}
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: white;
+}
+
+/*new*/
+.add-btn{
+    background-color: #fe424d;
+    border: none;
+    color: white;
+}
+
+/*edit*/
+
+.btn-edit{
+    background-color: #fe424d;
+    border: none;
+    color: white;
+    
+}
+
+/*show page*/
+
+.show-img{
+    height: 30vh;
+}
+
+.btns{
+    display: flex;
+    
+}
+
+/*show page Reviews*/
+
+#reviewsCard{
+    border: 2px solid gray !important;
+}
+
+/*show page Map*/
+#map { 
+    height: 350px;
+    width: 80vh;
+    margin-bottom: 2rem;
+
+};
+

@@ -1,0 +1,55 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    .searchbutton{
+      background-color: #FE424D;
+      color: white;
+      border-radius: 25px;
+      
+    }
+
+    .searchbutton:hover{
+      background-color: #FE424D;
+      color: white;
+    }
+
+    .searchbutton i{
+      margin-right: 0.5rem;
+    }
+    .input-Search{
+      border-radius: 25px;
+    }
+</style>
+
+<nav class="navbar navbar-expand-md navbar-light bg-light border-bottom sticky-top">
+    <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass"></i></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        
+        <a class="nav-item nav-link" href="/listings">Explore</a>
+        
+      </div>
+      <div class="navbar-nav ml-auto">
+        <nav class="navbar navbar-light bg-light">
+          <form class="form-inline">
+            <input class="form-control mr-sm-2 input-Search" type="search"
+             placeholder="Search Destination" aria-label="Search">
+            <button class="btn searchbutton my-2 my-sm-0" type="submit"><i class="fas fa-search"></i>
+              Search</button>
+          </form>
+        </nav>
+      </div>
+      <div class="navbar-nav ml-auto">
+        <a class="nav-item nav-link" href="/listings/new">Add new Listing</a>
+        <% if(!currUser){ %>
+          <a class="nav-item nav-link" href="/signup"><b>Signup</b></a>
+          <a class="nav-item nav-link" href="/login"><b>Login</b></a>
+        <%} %> <%if(currUser) { %>
+          <a class="nav-item nav-link" href="/logout"><b>Logout</b></a>
+        <%}%>
+       
+      </div>
+    </div>
+  </nav>

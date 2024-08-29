@@ -1,0 +1,110 @@
+<% layout("/layouts/boilerplate.ejs") %>
+
+<!--<h1>All Listings</h1> -->
+
+<style>
+    .filters{
+        display: flex;
+        flex-wrap: wrap;
+        
+        
+    }
+    .filter{
+        text-align: center;
+        margin-right: 2rem;
+        margin-top: 2rem;
+        opacity: 0.6;
+    }
+    .filter:hover{
+        opacity: 1;
+        cursor: pointer;
+    }
+    .filter p {
+        font-size:0.8rem ;
+    }
+    
+
+</style>
+
+<div class="filters" id="fillters">
+    <div class="filter">
+        <div><i class="fa-solid fa-fire"></i></div>
+        <p>Trending</p>
+    </div>
+
+    <div class="filter">
+        <div><i class="fa-solid fa-bed"></i></div>
+        <p>Rooms</p>
+    </div>
+
+    <div class="filter">
+        <div><i class="fa-solid fa-mountain-city"></i></div>
+        <p>Iconic Cities</p>
+    </div>
+
+    <div class="filter">
+        <div><i class="fa-solid fa-mountain"></i></div>
+        <p>mountain</p>
+    </div>
+
+    <div class="filter">
+        <div><i class="fa-brands fa-fort-awesome-alt"></i></div>
+        <p>Castels</p>
+    </div>
+
+    <div class="filter">
+        <div><i class="fa-solid fa-person-swimming"></i></div>
+        <p>Amezing Pools</p>
+    </div>
+
+    <div class="filter">
+        <div><i class="fa-solid fa-tent"></i></div>
+        <p>Camping</p>
+    </div>
+
+    <div class="filter">
+        <div><i class="fa-solid fa-wheat-awn"></i></div>
+        <p>Farm</p>
+    </div>
+
+    <div class="filter">
+        <div><i class="fa-solid fa-snowflake"></i></div>
+        <p>Arctic</p>
+    </div>
+
+    
+</div>
+
+
+<body class="body">
+    
+    <!-- <form method ="GET" action="/listings/new">
+        <button>New</button>
+    </form> -->
+    <div class="container">
+        <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3">
+            <% for (let lists of allListings){ %>
+            <a href="/listings/<%=lists._id%>" >
+                <div class="col mb-3"> <!-- Note: removed card class from here -->
+                    <div class="card" style="width: 20rem;">
+                        <img class="card-img-top" src="<%=lists.image.url %>" alt="listings_image" style="height: 20rem;">
+                        <div class="card-img-overlay"></div>
+                        <div class="card-body">
+                        <b> <h5 class="card-title .plus-jakarta-sans"><%=lists.title%></h5> </b>
+                        <p class="card-text  plus-jakarta-sans">Price:&#8377;<%=lists.price%>/Per Night </p>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <% } %>
+        </div>
+    </div>
+    
+
+
+
+   </body>
+
+
